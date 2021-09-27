@@ -1,0 +1,56 @@
+Age {
+    # que esté (SIN MODIFICACIONES)
+}
+
+Sex {
+    M= 0,
+    F=1
+}
+
+ChestPainType {
+    TA = 0,
+    ATA = 1,
+    NAP = 2,
+    ASY = 3,
+}
+
+RestingBP{
+     # que esté (SIN MODIFICACIONES)
+}
+
+Cholesterol{
+     # que esté (SIN MODIFICACIONES)
+}
+
+FastingBS{
+     # que esté (SIN MODIFICACIONES)
+}
+
+RestingECG{
+    Normal = 0,
+    ST = 1,
+    LHV = 2
+}
+
+MaxHR {
+     # que esté (SIN MODIFICACIONES)
+}
+
+ExerciseAngina{
+     N = 0,
+     Y = 1
+}
+
+Oldpeak {
+     # que esté (SIN MODIFICACIONES)
+}
+
+ST_Slope {
+    Down = 0
+    Flat = 1,
+    Up = 2
+}
+
+HeartDisease{
+     # que esté (SIN MODIFICACIONES)
+}
