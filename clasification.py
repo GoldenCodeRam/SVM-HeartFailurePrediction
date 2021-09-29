@@ -31,7 +31,7 @@ print("varianza", sum(pca.explained_variance_ratio_ * 100))
 np.cumsum(pca.explained_variance_ratio_ * 100)
 
 plt.plot(np.cumsum(pca.explained_variance_ratio_ * 100))
-plt.xlabel('Number of components')
+plt.xlabel('Number of variables')
 plt.ylabel('Explained variance')
 plt.show()
 
