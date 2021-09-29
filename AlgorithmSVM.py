@@ -28,7 +28,6 @@ def getST_Slope(x):
     elif x == 'Flat': return 1
     elif x == 'Up': return 2
 
-
 data = pd.read_csv ('heart.csv', sep = ',')
 
 data["Sex"] = data["Sex"].apply(getSex)
@@ -45,7 +44,7 @@ print(data.head())
 X = data.drop('HeartDisease', axis=1) # caracteristicas
 Y = data['HeartDisease'] # clase 
 
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20) # 20% para test
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=457) # 20% para test
 clf = SVC() # instancia el algoritmo
 clf.fit(X_train, y_train) #se entrena
 score = clf.score(X_test, y_test)  # se prueba
@@ -53,7 +52,7 @@ print(score)
 
 
 #___________________________PASO 2_________________________________________________
-
+"""
 x = [i for i in range(100)]
 for i in [0.1, 0.2, 0.3, 0.4]:
     scores = []
@@ -68,4 +67,4 @@ for i in [0.1, 0.2, 0.3, 0.4]:
     plt.xlabel("Ciclo")
     plt.ylabel("Percent Correct")
     plt.show()
-
+"""
