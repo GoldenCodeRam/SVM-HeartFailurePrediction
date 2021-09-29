@@ -23,7 +23,27 @@ X_scaled = scaler.transform(X)
 pca = PCA(n_components = 11, random_state =457).fit(X_scaled)
 
 # calcular varianza
+
+import numpy as np
+
 print("varianza", sum(pca.explained_variance_ratio_ * 100))
+
+np.cumsum(pca.explained_variance_ratio_ * 100)
+
+plt.plot(np.cumsum(pca.explained_variance_ratio_ * 100))
+plt.xlabel('Number of components')
+plt.ylabel('Explained variance')
+plt.show()
+
+print("Variance for one variables" , np.cumsum(pca.explained_variance_ratio_ * 100)[0])
+print("Variance for two variables" , np.cumsum(pca.explained_variance_ratio_ * 100)[1])
+print("Variance for three variables" , np.cumsum(pca.explained_variance_ratio_ * 100)[2])
+
+
+
+
+
+
 
 # Transformar datos a  2D
 pca_2D = PCA(n_components = 2, random_state =457).fit(X_scaled)
@@ -48,5 +68,4 @@ sctt = ax.scatter3D(X_pca_3D[:, 0], X_pca_3D[:,1], X_pca_3D[:,2], c = Y, s=50, a
 
 plt.title("3D Scatterplot: 72.64% of the variability captured", pad=15)
 plt.show()
- 
 
