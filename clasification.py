@@ -20,7 +20,7 @@ scaler.fit(X)
 X_scaled = scaler.transform(X)
 
 # transformar los datos
-pca = PCA(n_components = 11, random_state =457).fit(X_scaled)
+pca = PCA(n_components = 11, random_state =508).fit(X_scaled)
 
 # calcular varianza
 
@@ -46,7 +46,7 @@ print("Variance for three variables" , np.cumsum(pca.explained_variance_ratio_ *
 
 
 # Transformar datos a  2D
-pca_2D = PCA(n_components = 2, random_state =457).fit(X_scaled)
+pca_2D = PCA(n_components = 2, random_state =508).fit(X_scaled)
 X_pca_2D = pca_2D.transform(X_scaled)
 
 plt.figure(figsize =(10,7))
@@ -58,7 +58,7 @@ plt.show()
 
 from mpl_toolkits import mplot3d
 
-pca_3D = PCA(n_components = 3, random_state =457).fit(X_scaled)
+pca_3D = PCA(n_components = 3, random_state =508).fit(X_scaled)
 X_pca_3D = pca_3D.transform(X_scaled)
 
 fig = plt.figure(figsize = (12, 8))

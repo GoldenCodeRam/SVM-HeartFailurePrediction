@@ -7,7 +7,7 @@ data = pd.read_csv ('Data.csv', sep = ',')
 X = data.drop('HeartDisease', axis=1) # caracteristicas
 Y = data['HeartDisease'] # clase 
 
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=844) # 20% para test
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=508) # 20% para test
 clf = SVC() # instancia el algoritmo
 clf.fit(X_train, y_train) #se entrena
 
